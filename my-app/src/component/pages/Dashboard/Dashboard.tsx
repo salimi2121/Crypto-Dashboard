@@ -70,7 +70,7 @@ const Dashboard: React.FC = () => {
     fetchData();
   }, []);
 
-  if (loading) return <div className="p-4 text-gray-400 bg-[#17153A] h-[30rem]">Loading...</div>;
+  if (loading) return <div className="p-4 text-gray-400 ">Loading...</div>;
   if (error) return <div className="p-4 text-red-500">{error}</div>;
 
   return (

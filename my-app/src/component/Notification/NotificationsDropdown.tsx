@@ -86,7 +86,7 @@ const NotificationsDropdown: React.FC<{ unreadCount: number }> = ({ unreadCount 
       <button
         ref={buttonRef}
         onClick={toggleDropdown}
-        className="flex bg-gradient-to-br from-[#FF409A] to-[#C438EF] cursor-pointer rounded-3xl px-2 py-1 "
+        className="flex bg-gradient-to-br from-[#FF409A] to-[#C438EF] shadow-md shadow-[#ff4099cb] cursor-pointer rounded-3xl px-2 py-1 "
       >
         <IoMdNotifications className="text-white text-md" />
         {unreadCount > 0 && (
