@@ -2,6 +2,13 @@ import React from "react";
 import SvgIcon from "./SvgIcon";
 import { Link, useLocation } from "react-router-dom";
 import logoicon from "../../assets/sidebar/Logo.svg";
+import ActiveStateMark from "../../assets/sidebar/ActiveStateMark.png"
+import dashboard from "../../assets/sidebar/dashboard.svg"
+import Wallet from "../../assets/sidebar/Wallet.svg"
+import Message from "../../assets/sidebar/Message.svg"
+import Trade from "../../assets/sidebar/Trade.svg"
+import Account from "../../assets/sidebar/Account.svg"
+
 
 // انواع TypeScript برای آیتم‌های منو
 interface MenuItem {
@@ -14,34 +21,34 @@ interface MenuItem {
 const Sidebar: React.FC = () => {
   const location = useLocation();
   const hasNewMessages = true;
-  
+
   // آیتم‌های منو با مسیرهای SVG
   const menuItems: MenuItem[] = [
     {
       title: "Dashboard",
-      icon: "/src/assets/sidebar/dashboard.svg",
+      icon: dashboard,
       path: "/dashboard"
     },
     {
       title: "Wallet",
-      icon: "/src/assets/sidebar/Wallet.svg",
+      icon: Wallet,
       path: "/wallet"
 
     },
     {
       title: "Messages",
-      icon: "/src/assets/sidebar/Message.svg",
+      icon: Message,
       path: "/messages",
       hasNotification: hasNewMessages // اضافه کردن وضعیت نوتیفیکیشن
     },
     {
       title: "Trade",
-      icon: "/src/assets/sidebar/Trade.svg",
+      icon: Trade,
       path: "/trade"
     },
     {
       title: "Account Setting",
-      icon: "/src/assets/sidebar/Account.svg",
+      icon: Account,
       path: "/settings"
     },
   ];
@@ -65,7 +72,7 @@ const Sidebar: React.FC = () => {
               <li key={item.title} className="relative">
                 {isActive && (
                   <SvgIcon
-                    src="/src/assets/sidebar/ActiveStateMark.png"
+                    src={ActiveStateMark}
                     width={16}
                     height={16}
                     className="absolute -left-3 top-1"
