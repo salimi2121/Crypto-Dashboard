@@ -13,8 +13,6 @@ interface MobileActionsDropdownProps {
 const MobileActionsDropdown: React.FC<MobileActionsDropdownProps> = ({
   onSearchClick,
   onProfileClick,
-  onNotificationsClick,
-  unreadCount,
   userAvatar,
 }) => {
   const [isOpen, setIsOpen] = useState(false);

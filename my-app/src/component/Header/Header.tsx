@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import menuicon from "../../assets/header/Menu icn.svg";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -21,7 +20,6 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ user, unreadNotifications, isMobile,
     mobileMenuOpen,
     toggleMobileMenu }) => {
-    const [mobileActionsOpen, setMobileActionsOpen] = useState(false);
     return (
         <header className="shadow-sm p-4 flex items-start bg-[##17153a]">
             {isMobile ? (
@@ -36,7 +34,8 @@ const Header: React.FC<HeaderProps> = ({ user, unreadNotifications, isMobile,
                         <NotificationsDropdown unreadCount={unreadNotifications} />
 
                         <MobileActionsDropdown
-                            onSearchClick={() => {/* منطق جستجو */  setMobileActionsOpen(false); }}
+                        
+                            onSearchClick={() => {/* منطق جستجو */  }}
                             onNotificationsClick={() => {/* منطق اعلان‌ها */ }}
                             onProfileClick={() => {/* منطق پروفایل */ }}
                             unreadCount={unreadNotifications}
