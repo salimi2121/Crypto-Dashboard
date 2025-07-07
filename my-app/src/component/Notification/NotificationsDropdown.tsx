@@ -109,7 +109,7 @@ const NotificationsDropdown: React.FC<{ unreadCount: number }> = ({ unreadCount 
           </div>
 
           {/* لیست نوتیفیکیشن‌ها */}
-          <div className="max-h-[28rem] overflow-y-auto">
+          <div className="max-h-[28rem] overflow-y-auto cursor-pointer">
             {notifications.map(notification => (
               <NotificationItem key={notification.id} notification={notification} />
             ))}

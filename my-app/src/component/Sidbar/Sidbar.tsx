@@ -13,7 +13,8 @@ interface MenuItem {
 
 const Sidebar: React.FC = () => {
   const location = useLocation();
-  const [hasNewMessages, setHasNewMessages] = React.useState(true);
+  const hasNewMessages = true;
+  
   // آیتم‌های منو با مسیرهای SVG
   const menuItems: MenuItem[] = [
     {
