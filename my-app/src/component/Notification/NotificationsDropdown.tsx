@@ -100,7 +100,7 @@ const NotificationsDropdown: React.FC<{ unreadCount: number }> = ({ unreadCount 
       {isOpen && (
         <div
           ref={dropdownRef}
-          className="absolute right-0 mt-2 w-[28rem] bg-[#1B1942] rounded-lg shadow-xl pt-2 z-50"
+          className="absolute right-0 max-[570px]:-right-20 mt-2 w-[28rem] max-[500px]:w-[20rem] max-[370px]:w-[19rem]  bg-[#1B1942] rounded-lg shadow-xl pt-2 z-50"
         >
 
           {/* هدر */}

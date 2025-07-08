@@ -29,7 +29,7 @@ const MainChart: React.FC<MainChartProps> = ({ data, activeCurrency }) => {
 
   // محور Y با فاصله 500 از 2000 تا 6500
   const yAxisTicks = [2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500];
-const handleTooltipChange = (state: any) => {
+const handleTooltipChange =(state: { activePayload?: any[]; isTooltipActive?: boolean })  => {
   if (state.isTooltipActive && state.activePayload && state.activePayload.length > 0) {
     const timeValue = state.activePayload[0].payload.time;
     const dataIndex = data.findIndex(d => d.time === timeValue);
@@ -41,7 +41,7 @@ const handleTooltipChange = (state: any) => {
 
 
   return (
-    <div className="h-[650px] pb-20 rounded-lg">
+    <div className="h-[650px] pb-20 rounded-lg max-[500px]:max-w-[98%]">
       {/* بخش نمایش نام ارزها */}
       <div className="flex justify-start gap-14 ml-20 mt-4 text-gray-400">
         {Object.entries(currencyStyles).map(([currency, style]) => (

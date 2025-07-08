@@ -74,7 +74,7 @@ const Dashboard: React.FC = () => {
   if (error) return <div className="p-4 text-red-500">{error}</div>;
 
   return (
-    <div className="p-4 pt-0 rounded-lg shadow ">
+    <div className="p-4 pt-0 rounded-lg shadow max-[400px]:px-2">
       <WalletsSection 
         cryptoData={cryptoData} 
         activeCurrency={activeCurrency}

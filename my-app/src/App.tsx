@@ -46,7 +46,7 @@ function App() {
         />
 
         {/* محتوای اصلی */}
-        <main className={`flex-1 transition-all duration-300 ${
+        <main className={`flex-1 transition-all duration-300 max-[370px]:px-4 ${
           isMobile ? "ml-0" : "ml-64"
         } p-6`}>
           <Outlet />

@@ -55,7 +55,7 @@ const CryptoCard: React.FC<CryptoCardProps> = ({
           <div className="flex items-center ">
             <div className="h-6 w-1/2 ">
               {cardChartData.length > 0 && (
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="90%" height="100%">
                   <LineChart data={cardChartData}>
                     <Line
                       type="monotone"

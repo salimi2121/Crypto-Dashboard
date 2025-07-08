@@ -185,7 +185,7 @@ const NotificationItem: React.FC<{ notification: Notification }> = ({ notificati
         </div>
         <div className="flex-1">
           <div className="flex justify-start gap-4">
-            <h4 className="font-semibold text-[#8786AB] group-hover:text-[#B1AFCD]">
+            <h4 className="font-semibold max-[370px]:text-[14.4px] text-[#8786AB] group-hover:text-[#B1AFCD]">
               {notification.sender}
             </h4>
             <div className="mt-1 text-xs">
